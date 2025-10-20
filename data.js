@@ -1,7 +1,45 @@
 var APP_DATA = {
   "scenes": [
     {
-      "id": "0-corner",
+      "id": "0-door",
+      "name": "Door",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 2048,
+      "initialViewParameters": {
+        "yaw": 0.23811106772268076,
+        "pitch": 0.13669041063793586,
+        "fov": 1.38217411905719
+      },
+      "linkHotspots": [
+        {
+          "yaw": 0.09868823314663189,
+          "pitch": -0.01217898591886879,
+          "rotation": 0,
+          "target": "2-center"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "1-corner",
       "name": "Corner",
       "levels": [
         {
@@ -51,44 +89,6 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "1-door",
-      "name": "Door",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 2048,
-      "initialViewParameters": {
-        "yaw": 0.23811106772268076,
-        "pitch": 0.13669041063793586,
-        "fov": 1.38217411905719
-      },
-      "linkHotspots": [
-        {
-          "yaw": 0.09868823314663189,
-          "pitch": -0.01217898591886879,
-          "rotation": 0,
-          "target": "2-center"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
       "id": "2-center",
       "name": "Center",
       "levels": [
@@ -121,13 +121,13 @@ var APP_DATA = {
           "yaw": -1.107343954741852,
           "pitch": -0.014745362740328005,
           "rotation": 0,
-          "target": "0-corner"
+          "target": "1-corner"
         },
         {
           "yaw": 1.1803986009687417,
           "pitch": -0.22698862434022082,
           "rotation": 0,
-          "target": "1-door"
+          "target": "0-door"
         },
         {
           "yaw": -2.1927469564648163,
@@ -228,7 +228,7 @@ var APP_DATA = {
           "yaw": -2.438529422417769,
           "pitch": 0.020530612225677203,
           "rotation": 0,
-          "target": "0-corner"
+          "target": "1-corner"
         }
       ],
       "infoHotspots": [
